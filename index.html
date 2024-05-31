@@ -8,7 +8,7 @@
   <button onclick="toggleRecordMode()">Toggle Record Mode</button>
 
   <script>
-    const esp32Ip = 'http://10.10.0.2'; // 替换为你的ESP32的IP地址
+    const esp32Ip = 'https://0c6d-61-228-199-213.ngrok-free.app/'; // 替换为你的 Ngrok 公共 URL
 
     function toggleRecordMode() {
       fetch(`${esp32Ip}/toggle`)
