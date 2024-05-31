@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ESP32 Control</title>
+</head>
+<body>
+  <h1>Control ESP32</h1>
+  <button onclick="toggleRecordMode()">Toggle Record Mode</button>
+
+  <script>
+    const esp32Ip = 'http://10.10.0.2'; // 替换为你的ESP32的IP地址
+
+    function toggleRecordMode() {
+      fetch(`${esp32Ip}/toggle`)
+        .then(response => response.text())
+        .then(data => {
+          console.log(data);
+          alert('Toggled record mode');
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          alert('Error toggling record mode');
+        });
+    }
+  </script>
+</body>
+</html>
